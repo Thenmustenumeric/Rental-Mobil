@@ -8,94 +8,96 @@
   <style>
     /* Simple gradient background for hero */
     .hero-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-    /* small helper for placeholder images */
-    .placeholder {
-      background: linear-gradient(180deg, #f3f4f6, #e5e7eb);
-      display:flex;align-items:center;justify-content:center;color:#9ca3af;
-    }
-    /* Smooth transitions */
+    
+    /* Smooth transitions for interactive elements */
     a, button { transition: all 0.3s ease; }
+    
     /* Card hover effect */
     article { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    article:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+    article:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+
+    /* Custom Scrollbar (optional enhancement) */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 font-sans">
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-gray-200 shadow-lg">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded flex items-center justify-center font-bold text-white"><img src="foto/WhatsApp Image 2025-12-01 at 10.20.15.jpeg" alt="Hero Image" class="w-full h-full object-cover"></div>
-        <nav class="hidden md:flex gap-6 text-sm font-medium">
-          <a href="#" class="text-gray-700 hover:text-purple-600 hover:font-semibold">Beranda</a>
-          <a href="#armada" class="text-gray-700 hover:text-purple-600 hover:font-semibold">Armada</a>
-          <a href="#company" class="text-gray-700 hover:text-purple-600 hover:font-semibold">Company</a>
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-purple-600">
+            <img src="foto/WhatsApp Image 2025-12-01 at 10.20.15.jpeg" alt="Logo Dannela" class="w-full h-full object-cover">
+        </div>
+        <span class="font-bold text-xl tracking-tight text-purple-700 md:hidden lg:block">Dannela Rental</span>
+        
+        <nav class="hidden md:flex gap-6 text-sm font-medium ml-6">
+          <a href="#" class="text-gray-700 hover:text-purple-600 hover:font-bold">Beranda</a>
+          <a href="#armada" class="text-gray-700 hover:text-purple-600 hover:font-bold">Armada</a>
+          <a href="#company" class="text-gray-700 hover:text-purple-600 hover:font-bold">Tentang Kami</a>
         </nav>
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:shadow-lg hover:scale-105">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M..."/></svg>
-          Hubungi Kami
+        <a href="https://wa.me/6282241199595?text=Halo%20Admin,%20saya%20mau%20sewa%20mobil" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-5 py-2 rounded-full shadow hover:shadow-lg hover:scale-105">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.305-5.235c0-5.443 4.429-9.87 9.88-9.87 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.444-4.432 9.87-9.882 9.87m9.902-17.653C19.337 1.556 16.147 0 12.045 0 5.421 0 .029 5.397.029 12.022c0 2.122.551 4.145 1.597 5.922L0 24l6.195-1.626c1.714.935 3.655 1.43 5.65 1.43 6.649 0 12.042-5.396 12.042-12.022 0-3.212-1.251-6.23-3.535-8.514z"/>
+          </svg>
+          <span class="font-semibold">Hubungi Kami</span>
         </a>
-        <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-gray-100 rounded-lg">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t absolute w-full left-0 shadow-lg">
+        <div class="flex flex-col p-4 space-y-3 font-medium">
+            <a href="#" class="block text-gray-700 hover:text-purple-600 hover:bg-gray-50 px-3 py-2 rounded">Beranda</a>
+            <a href="#armada" class="block text-gray-700 hover:text-purple-600 hover:bg-gray-50 px-3 py-2 rounded">Armada</a>
+            <a href="#company" class="block text-gray-700 hover:text-purple-600 hover:bg-gray-50 px-3 py-2 rounded">Tentang Kami</a>
+            <a href="https://wa.me/6282241199595" class="block text-center bg-green-500 text-white px-3 py-2 rounded font-bold">Hubungi Kami</a>
+        </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero-bg text-white py-32">
-    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">Solusi Terbaik Untuk Jasa Rental Mobil</h1>
-        <p class="text-lg text-gray-100 mb-8">Nikmati pengalaman berkendara yang aman, nyaman, dan terpercaya dengan armada terbaik kami.</p>
-        <div class="mt-6 flex gap-3">
-          <a href="https://wa.me/" target="_blank" class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg shadow hover:shadow-lg hover:scale-105">Sewa Sekarang</a>
-          <a href="#armada" class="border-2 border-white px-6 py-3 rounded-lg text-white hover:bg-white hover:text-purple-600 font-semibold">Lihat Armada</a>
+  <section class="hero-bg text-white py-24 md:py-32">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div class="animate-fade-in-up">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Solusi Perjalanan Aman & Nyaman</h1>
+        <p class="text-lg md:text-xl text-purple-100 mb-8 max-w-lg">Nikmati pengalaman berkendara terbaik dengan armada terawat dan pelayanan 24 jam. Siap menemani perjalanan bisnis maupun liburan Anda.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://wa.me/6282241199595" target="_blank" class="bg-white text-purple-700 font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 hover:bg-gray-50 transition">Sewa Sekarang</a>
+          <a href="#armada" class="border-2 border-white px-8 py-3 rounded-full text-white font-semibold hover:bg-white hover:text-purple-700 transition">Lihat Armada</a>
         </div>
       </div>
 
-      <div class="hidden md:block">
-        <div class="w-full h-80 rounded-xl overflow-hidden shadow-2xl">
-          <img src="foto/download (6).jpg" alt="Hero Image" class="w-full h-full object-cover">
+      <div class="hidden md:block relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+        <div class="relative w-full h-80 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 group-hover:rotate-0 transition">
+          <img src="foto/mazda3hb.png" alt="Mobil Rental Premium" class="w-full h-full object-cover">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MITRA / LOGOS -->
-  <section class="py-16 bg-gradient-to-r from-gray-50 to-white">
+  <!-- MITRA / LOGO -->
+  <section class="py-12 bg-white border-b">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-10 text-center">Mitra Kami</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center">
-        <!-- Replace src with your sponsor images in `foto/` folder. -->
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor/sp1.jpg" alt="Sponsor 1" class="h-12 object-contain">
-        </div>
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor//sp2.jpg" alt="Sponsor 2" class="h-12 object-contain">
-        </div>
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor//sp11.jpg" alt="Sponsor 3" class="h-12 object-contain">
-        </div>
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor/sp12.jpg" alt="Sponsor 4" class="h-12 object-contain">
-        </div>
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor/sp6.jpg" alt="Sponsor 4" class="h-12 object-contain">
-        </div>
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor/sp7.jpg" alt="Sponsor 4" class="h-12 object-contain">
-        </div>
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor/sp8.jpg" alt="Sponsor 4" class="h-12 object-contain">
-        </div>
-        <div class="flex items-center justify-center p-3 bg-white rounded-lg shadow-md hover:shadow-lg">
-          <img src="sponsor/sp9.jpg" alt="Sponsor 4" class="h-12 object-contain">
-        </div>
+      <p class="text-center text-gray-500 text-sm font-semibold uppercase tracking-wider mb-6">Dipercaya oleh Mitra & Perusahaan</p>
+      <div class="flex flex-wrap justify-center gap-8 md:gap-12 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+        <img src="sponsor/sp1.jpg" alt="Partner 1" class="h-10 md:h-12 object-contain hover:scale-110 transition">
+        <img src="sponsor/sp2.jpg" alt="Partner 2" class="h-10 md:h-12 object-contain hover:scale-110 transition">
+        <img src="sponsor/sp11.jpg" alt="Partner 3" class="h-10 md:h-12 object-contain hover:scale-110 transition">
+        <img src="sponsor/sp12.jpg" alt="Partner 4" class="h-10 md:h-12 object-contain hover:scale-110 transition">
+        <img src="sponsor/sp6.jpg" alt="Partner 5" class="h-10 md:h-12 object-contain hover:scale-110 transition">
+        <img src="sponsor/sp5.jpg" alt="Partner 6" class="h-10 md:h-12 object-contain hover:scale-110 transition">
+        <img src="sponsor/sp5.jpg" alt="Partner 7" class="h-10 md:h-12 object-contain hover:scale-110 transition">
       </div>
     </div>
   </section>
